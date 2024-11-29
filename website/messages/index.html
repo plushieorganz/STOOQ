@@ -56,20 +56,19 @@
     <main class="grid grid-cols-1 md:grid-cols-[1fr_3fr] lg:grid-cols-[1fr_3fr] w-full min-h-[70vh] flex-1">
         <section class="bg-light-purple/50 w-full" id="contacts" >
             <menu class="flex flex-col h-full">
-                <button onclick="openChat()" class="text-primary text-xl font-bold p-6 bg-light-purple-highlight"> Beaded Wonders </button>
-                <button onclick="openChat()" class="text-primary text-xl font-bold p-6 bg-light-purple hover:transition-colors ease-in-out hover:bg-light-purple-highlight duration-150">
-                    <span> Shop 2 </span>
-                    <div class="text-white bg-primary w-8 h-8 font-bold rounded-full aspect-square float-end"> 1 </div>
+                <button onclick="openChat()" class="text-primary text-xl font-bold p-6 bg-light-purple-highlight grid grid-cols-[1fr_3fr] items-center gap-4">
+                    <div class="h-14 w-14 aspect-square rounded-full bg-gray-800"></div>
+                    <span class="text-start"> Beaded Wonders </span>
                 </button>
-                <button onclick="openChat()" class="text-primary text-xl font-bold p-6 bg-light-purple hover:transition-colors ease-in-out hover:bg-light-purple-highlight duration-150">
-                    <span> Shop 3 </span>
-                    <div class="text-white bg-transparent w-8 h-8 font-bold rounded-full aspect-square float-end"></div>
+                <button onclick="openChat()" class="text-primary text-xl font-bold p-6 bg-light-purple hover:bg-light-purple-highlight ease-in-out duration-150 grid grid-cols-[1fr_3fr] items-center gap-4">
+                    <div class="h-14 w-14 aspect-square rounded-full bg-gray-800"></div>
+                    <span class="text-start">Shop 2</span>
                 </button>
-                <button onclick="openChat()" class="text-primary text-xl font-bold p-6 bg-light-purple hover:transition-colors ease-in-out hover:bg-light-purple-highlight duration-150">
-                    <span> Shop 4 </span>
-                    <div class="text-white bg-transparent w-8 h-8 font-bold rounded-full aspect-square float-end"></div>
+
+                <button onclick="openChat()" class="text-primary text-xl font-bold p-6 bg-light-purple hover:bg-light-purple-highlight ease-in-out duration-150  grid grid-cols-[1fr_3fr] items-center gap-4">
+                    <div class="h-14 w-14 aspect-square rounded-full bg-gray-800"></div>
+                    <span class="text-start">Shop 3</span>
                 </button>
-            </menu>
         </section>
 
         <section class="hidden md:grid lg:grid grid-rows-[1fr_3fr_1fr] bg-white" id="chat">
