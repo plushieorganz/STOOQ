@@ -19,7 +19,7 @@
         }
     </script>
 </head>
-<body class="bg-[#f2f2f2] w-screen min-h-screen flex flex-col overflow-hidden">
+<body class="bg-[#f2f2f2] w-screen min-h-screen flex flex-col pb-16">
 
     <nav class="w-full bg-white shadow-md px-4 py-2 grid grid-cols-2 z-10">
         <section> 
@@ -48,10 +48,71 @@
             <button>
                 <div class="w-12 h-12 aspect-square rounded-full bg-slate-900"></div>
             </button>
-
         </section>
     </nav>
     
+
+    <main class="min-h-[50vh] flex flex-col items-center pt-24">
+        <h2 class="font-bold text-primary text-2xl md:text-4xl "> Your Cart </h2>
+
+        <ul class="w-3/4 mt-16 text-primary font-semibold text-3xl">
+            <li class="grid grid-cols-[1fr_4fr_1fr_1fr_1fr] gap-8 border-b-2 border-gray-500 py-4 text-center">
+                <span> Product </span>
+                <div></div>
+                <span>Price</span>
+                <span>Quantity</span>
+            </li>
+
+            <li class="grid grid-cols-[1fr_4fr_1fr_1fr_1fr] items-center gap-8 border-b-2 border-gray-500 py-4 text-center">
+
+                <div>
+                    <div class="w-48 h-48 bg-gray-900"></div>
+                </div>
+
+                <span class="text-left"> Product 1 </span>
+
+                <span class="text-[#333]"> 8.00 OMR</span>
+
+                <div>
+                    <div class="border-2 border-gray-400 rounded-md grid grid-cols-3 items-center">
+                        <button class="text-gray-500 hover:bg-primary hover:text-white ease-in-out duration-150 text-4xl py-2"> - </button>
+                        <span> 1 </span>
+                        <button class="text-gray-500 hover:bg-primary hover:text-white ease-in-out duration-150 text-4xl py-2"> + </button>
+                    </div>
+                </div>
+
+                <button class="text-primary underline text-2xl"> Edit </button>
+            </li>
+
+            <li class="grid grid-cols-[1fr_4fr_1fr_1fr_1fr] items-center gap-8 border-b-2 border-gray-500 py-4 text-center">
+
+                <div>
+                    <div class="w-48 h-48 bg-gray-900"></div>
+                </div>
+
+                <span class="text-left"> Product 2 </span>
+
+                <span class="text-[#333]"> 4.00 OMR</span>
+
+                <div>
+                    <div class="border-2 border-gray-400 rounded-md grid grid-cols-3 items-center">
+                        <button class="text-gray-500 hover:bg-primary hover:text-white ease-in-out duration-150 text-4xl py-2"> - </button>
+                        <span> 1 </span>
+                        <button class="text-gray-500 hover:bg-primary hover:text-white ease-in-out duration-150 text-4xl py-2"> + </button>
+                    </div>
+                </div>
+
+                <button class="text-primary underline text-2xl"> Edit </button>
+            </li>
+
+        </ul>
+
+        <section class="w-3/4 flex flex-col items-end mt-12">
+            <h4 class="text-3xl font-bold text-primary"> Subtotal: 12.60 OMR </h4>
+            <p class="text-gray-500 text-xl font-semibold"> 5% VAT included</p>
+            <button class="text-white bg-primary rounded-md px-4 py-2 shadow-sm mt-4 font-bold hover:text-primary hover:bg-white ease-in-out duration-150"> Check Out </button>
+        </section>
+    </main>
 
 
 </body>
