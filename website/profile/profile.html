@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#5A10C7",
+                        "dark-primary": "#360D73",
+                        "white": "#ffffff",
+                        "light-purple": "#CBC7FF",
+                        "dark-purple": "#5A10C7",
+                        "lavender": "#DEDBFF",
+                        "depth-lavender": "#CBC7FF",
+                        "cooltone-purple": "#B3ADFB",
+                        "warmtone-purple": "#BFA9FF"
+                    }
+                }
+            }
+        };
+    </script>
+    <link rel="icon" type="image/x-icon" href="https://github.com/plushieorganz/STOOQ/blob/main/Assets/STOOQ_logo.png?raw=true">
+    <title>STOOQ Profile Page</title>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-md p-4 flex items-center justify-between">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+            <img src="../../Assets/STOOQ_logo.png" alt="STOOQ Logo" class="w-10 h-10">
+            <h1 class="text-primary text-2xl font-bold">STOOQ</h1>
+        </div>
+        <!-- Icons -->
+        <div class="flex items-center gap-4">
+            <a href="/cart"><img src="https://via.placeholder.com/24" alt="Cart"></a>
+            <a href="/messages"><img src="https://via.placeholder.com/24" alt="Messages"></a>
+            <a href="/profile"><img src="https://via.placeholder.com/24" alt="Profile"></a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="flex">
+        <!-- Sidebar -->
+        <nav class="w-64 bg-lavender p-6 h-screen">
+            <ul class="space-y-4">
+                <li><a href="/profile" class="block py-2 px-4 hover:bg-depth-lavender hover:font-semibold hover:text-primary rounded">Profile</a></li>
+                <li><a href="/address" class="block py-2 px-4 hover:bg-depth-lavender hover:font-semibold hover:text-primary rounded">Address</a></li>
+                <li><a href="/notifications" class="block py-2 px-4 hover:bg-depth-lavender hover:font-semibold hover:text-primary rounded">Notifications</a></li>
+                <li><a href="/orders" class="block py-2 px-4 hover:bg-depth-lavender hover:font-semibold hover:text-primary rounded">Orders</a></li>
+                <li><a href="/logout" class="block py-2 px-4 hover:bg-depth-lavender hover:font-semibold hover:text-primary rounded">Log Out</a></li>
+            </ul>
+        </nav>
+
+        <!-- Unified Profile Section -->
+        <div class="flex-grow bg-white shadow-md  p-6 flex justify-between items-start">
+            <!-- Profile Details Form -->
+            <form id="profile-form" class="space-y-4 flex-grow mr-8">
+                <h1 class="text-xl font-bold text-primary mb-6">Profile</h1>
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                    <input type="text" id="name" placeholder="John Doe" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500">
+                </div>
+                <div>
+                    <label for="phone" class="block text-sm font-medium text-gray-700">Phone</label>
+                    <input type="text" id="phone" placeholder="+968 9123 4567" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" placeholder="johndoe@gmail.com" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500">
+                </div>
+                <a href="#" class="text-sm font-semibold text-gray-500 hover:text-purple-700 mt-5 block">Forgot Password?</a>
+                <button type="submit" class="bg-primary text-white px-4 py-2 rounded-md shadow hover:bg-dark-primary">Done</button>
+            </form>
+
+            <!-- Profile Image Section -->
+            <div class="flex flex-col items-center">
+                <img id="profile-image" src="https://via.placeholder.com/100" alt="Profile Image" class="w-32 h-32 rounded-full mb-4">
+                <button id="change-photo" class="bg-primary text-white px-4 py-2 rounded-md shadow hover:bg-dark-primary hover:bg-dark-primary mb-2">Change Photo</button>
+                <button id="remove-photo" class="border border-primary text-primary px-4 py-2 rounded-md shadow hover:bg-dark-primary hover:bg-purple-100">Remove Photo</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Handle profile image upload
+        const profileImage = document.getElementById('profile-image');
+        const changePhotoButton = document.getElementById('change-photo');
+        const removePhotoButton = document.getElementById('remove-photo');
+
+        changePhotoButton.addEventListener('click', () => {
+            alert("Change photo functionality can be implemented.");
+        });
+
+        removePhotoButton.addEventListener('click', () => {
+            profileImage.src = 'https://via.placeholder.com/100';
+        });
+
+        // Handle form submission
+        const profileForm = document.getElementById('profile-form');
+        profileForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            alert('Profile saved successfully!');
+        });
+    </script>
+</body>
+</html>
