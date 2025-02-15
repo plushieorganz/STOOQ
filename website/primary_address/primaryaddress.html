@@ -24,7 +24,7 @@
         };
     </script>
     <link rel="icon" type="image/x-icon" href="../../Assets/Favicon.png">
-    <title>Profile Page</title>
+    <title>Primary Adress Page</title>
 </head>
 <body class="bg-gray-100 font-sans">
 
@@ -79,57 +79,52 @@
             </ul>
         </nav>
 
-        <!-- Unified Profile Section -->
-        <div class="flex-grow bg-white shadow-md  p-6 flex justify-between items-start">
-            <!-- Profile Details Form -->
-            <form id="profile-form" class="space-y-4 flex-grow mr-8">
-                <h1 class="text-xl font-bold text-primary mb-6">Profile</h1>
-                <div>
-                    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-                    <input type="text" id="name" required= "" placeholder="John Doe" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500">
-                </div>
-                <div>
-                    <label for="phone" class="block text-sm font-medium text-gray-700">Phone</label>
-                    <input type="text" id="phone" required= ""  placeholder="+968 9123 4567" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500">
-                </div>
-                <div>
-                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                    <input type="email" id="email" required= ""  placeholder="johndoe@gmail.com" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500">
-                </div>
-                <a href="../forgot_password/forgotpassword.html" class="text-sm font-semibold text-gray-500 hover:text-purple-700 mt-5 block">Forgot Password?</a>
-                <button type="submit" class="bg-primary text-white px-4 py-2 rounded-md shadow hover:bg-dark-primary">Done</button>
-            </form>
+  <!-- Main Addresses Section -->
+<div class="flex-grow bg-white shadow-md p-8">
+    <!-- Title -->
+    <h1 class="text-2xl font-bold text-primary mb-6">Primary Address</h1>
 
-            <!-- Profile Image Section -->
-            <div class="flex flex-col items-center">
-                <img id="profile-image" src="https://dummyimage.com/600x400/f0f0f0/fff&text=." alt="Profile Image" class="w-32 h-32 rounded-full mb-4">
-                <button id="change-photo" class="bg-primary text-white px-4 py-2 rounded-md shadow hover:bg-dark-primary hover:bg-dark-primary mb-2">Change Photo</button>
-                <button id="remove-photo" class="border border-primary text-primary px-4 py-2 rounded-md shadow hover:bg-dark-primary hover:bg-purple-100">Remove Photo</button>
-            </div>
+    <!-- Choosing a Primary Address -->
+     <fieldset> 
+    <div class="space-y-6">
+
+        <!-- Address 1 -->
+         
+        <div class="border-b border-primary pb-4 flex items-center gap-3">
+            <label for="address-1" class="flex items-start cursor-pointer">
+                <!-- Radio Button -->
+                <input id="address-1" type="radio" name="address" value="seeb"
+                    class="w-5 h-5 text-primary focus:ring-primary checked:ring-primary checked:bg-primary border-gray-300 transition-all">
+        
+                <!-- Address Details -->
+                <div class="ml-3">
+                    <p class="text-lg font-semibold"><span class="font-bold">House</span> Seeb</p>
+                    <p class="text-gray-500">354, Wadi Al Bhaiyas, 2454</p>
+                    <p class="text-gray-500">Mobile Number: +968 99******</p>
+                </div>
+            </label>
         </div>
+        <!-- Address 2 -->
+         
+        <div class="border-b border-primary pb-4 flex items-center gap-3">
+            <label for="address-2" class="flex items-start cursor-pointer">
+                <!-- Radio Button -->
+                <input id="address-2" type="radio" name="address" value="mabeela-north"
+                    class="w-5 h-5 text-primary focus:ring-primary checked:ring-primary checked:bg-primary border-gray-300 transition-all">
+        
+                <!-- Address Details -->
+                <div class="ml-3">
+                    <p class="text-lg font-semibold"><span class="font-bold">House</span> Mabeela North</p>
+                    <p class="text-gray-500">11, Wadi Al Bhaiyas, 1111</p>
+                    <p class="text-gray-500">Mobile Number: +968 77******</p>
+                </div>
+            </label>
+        </div>
+        
+
+
     </div>
-
-    <!-- JavaScript -->
-    <script>
-        // Handle profile image upload
-        const profileImage = document.getElementById('profile-image');
-        const changePhotoButton = document.getElementById('change-photo');
-        const removePhotoButton = document.getElementById('remove-photo');
-
-        changePhotoButton.addEventListener('click', () => {
-            alert("Change photo functionality can be implemented.");
-        });
-
-        removePhotoButton.addEventListener('click', () => {
-            profileImage.src = 'https://via.placeholder.com/100';
-        });
-
-        // Handle form submission
-        const profileForm = document.getElementById('profile-form');
-        profileForm.addEventListener('submit', (event) => {
-            event.preventDefault();
-            alert('Profile saved successfully!');
-        });
-    </script>
+</fieldset>
+</div>
 </body>
 </html>
